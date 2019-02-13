@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+         #
+#    By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/31 20:35:25 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/13 18:54:15 by sbednar          ###   ########.fr        #
+#    Updated: 2019/02/13 22:07:27 by edraugr-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,13 +66,15 @@ SRC			=	vec2_init.c \
 				color_lerp.c \
 				color_get_default.c \
 				vec2_set.c \
-				ft_min_max.c
+				ft_min_max.c \
+				vec3_set.c \
+				dots4_cpy.c
 
 OBJ			=	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 INC			=	-I. -I../libft -I../minilibx
 
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror -g
+CFLAGS		=	-Wall -Wextra -Werror -g -o3
 
 all: $(NAME)
 

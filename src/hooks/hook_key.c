@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hook_key.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:44:24 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/13 19:06:17 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 22:12:19 by edraugr-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,10 @@ int			hook_key(const int key, t_mouse *mouse)
 		mouse->dots->cm = (mouse->dots->cm + 1) % 3;
 		dots_color_update(mouse->dots);
 	}
+	if (key == KEY_X)
+		hook_x(mouse);
+	else if (key == KEY_H)
+		hook_h(mouse);
 	redraw(mouse->mlx, mouse->dots, mouse->cam);
 	return (0);
 }

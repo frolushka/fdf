@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+         #
+#    By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 16:23:16 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/13 18:52:09 by sbednar          ###   ########.fr        #
+#    Updated: 2019/02/13 22:09:36 by edraugr-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,14 +33,19 @@ SRC			= 	main.c \
 				reader_utils.c \
 				mouse_init.c \
 				dots_solve.c \
-				dots_connect.c
+				dots_connect.c \
+				hook_mouse.c \
+				fill_xyu.c \
+				xyu.c \
+				hook_xyu.c
+
 OBJ			=	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
 INCS		=	-I. -I./ll3d -I./minilibx -I./libft
 LIBS		=	-L./libft -L./minilibx -L./ll3d -lft -lmlx -lll3d -framework OpenGL -framework AppKit
 
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror -g
+CFLAGS		=	-Wall -Wextra -Werror -g -o3
 
 all: $(NAME)
 	@echo "\033[92m\033[1m---> ALL DONE\033[0m\033[0m"

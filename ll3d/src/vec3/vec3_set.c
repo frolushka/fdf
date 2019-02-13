@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   hook_mouse.c                                       :+:      :+:    :+:   */
+/*   vec3_set.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/09 11:30:44 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 21:50:04 by edraugr-         ###   ########.fr       */
+/*   Created: 2019/02/13 22:01:24 by edraugr-          #+#    #+#             */
+/*   Updated: 2019/02/13 22:01:34 by edraugr-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "ll3d.h"
 
-int	hook_mouse_move(int x, int y, t_mouse *mouse)
+void	vec3_set(t_vec3 *v, const float x, const float y, const float z)
 {
-	int		dx;
-	int		dy;
-
-	dx = x - mouse->x;
-	dy = y - mouse->y;
-	if (dx != 0)
-		hook_camera_rotate_y(mouse->cam, (float)dx * MOUSE_TO_ANG);
-	if (dy != 0)
-		hook_camera_rotate_x(mouse->cam, (float)dy * MOUSE_TO_ANG);
-	mouse->x = x;
-	mouse->y = y;
-	redraw(mouse->mlx, mouse->dots, mouse->cam);
-	return (0);
+	v->x = x;
+	v->y = y;
+	v->z = z;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ll3d.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 14:56:09 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/13 18:54:04 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 22:06:56 by edraugr-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define CAM_SE		1
 # define CAM_FO		0.1f
 
-# define SCREEN_X	1200
-# define SCREEN_Y	800
+# define SCREEN_X	1920
+# define SCREEN_Y	1080
 
 # define COLOR_WHITE	0xFFFFFF
 # define COLOR_RED		0xFF0000
@@ -135,6 +135,7 @@ t_vec3				*vec3_sum(t_vec3 const *v1, t_vec3 const *v2);
 t_vec3				*vec3_mult(t_vec3 const *v, float const s);
 t_vec3				*vec3_copy(t_vec3 const *v);
 void				vec3_print(t_vec3 const *v);
+void				vec3_set(t_vec3 *v, const float x, const float y, const float z);
 
 /*
 ** T_VEC4
@@ -147,6 +148,7 @@ t_vec4				*vec4_sum(t_vec4 const *v1, t_vec4 const *v2);
 t_vec4				*vec4_mult(t_vec4 const *v, float const s);
 t_vec4				*vec4_copy(t_vec4 const *v);
 void				vec4_print(t_vec4 const *v);
+t_vec4				**dots4_cpy(const t_vec4 **src, const int xc, const int yc);
 
 /*
 ** MATH

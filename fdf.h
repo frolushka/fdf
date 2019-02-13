@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:57:07 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 18:49:00 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 22:09:16 by edraugr-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@
 # define KEY_6			88
 # define KEY_7			89
 # define KEY_8			91
+# define KEY_X			7
+# define KEY_H			4
+
+# define MOUSE_TO_ANG	0.1f
 
 typedef struct			s_mouse
 {
@@ -52,7 +56,18 @@ typedef struct			s_mouse
 	t_mlx				*mlx;
 	t_cam				*cam;
 	t_dots				*dots;
+	t_vec4				**norm;
+	t_vec4				**xyu;
 }						t_mouse;
+
+typedef struct			s_xyu
+{
+	t_vec3				m_r[12];
+	t_vec3				b_r[7];
+	t_vec3				bb_r[5];
+	t_vec3				f_r[10];
+	t_vec3				ff_r[8];
+}						t_xyu;
 
 int						read_dots(char *fn, t_dots **res);
 void					solve_dots(t_dots *dots, const t_cam *cam);
@@ -64,6 +79,8 @@ void					redraw(const t_mlx *c, t_dots *dots, const t_cam *cam);
 int						hook_mouse_move(int x, int y, t_mouse *mouse);
 int						hook_key(const int key, t_mouse *mouse);
 int						hook_wheel(int key, int x, int y, t_mouse *m);
+int 					hook_x(t_mouse *mouse);
+int 					hook_h(t_mouse *mouse);
 
 int						check_line_valid(char **line);
 int						fill_dots(char *fn, t_dots **res);
@@ -91,5 +108,10 @@ void					dots_solve(t_dots *dots, const t_cam *cam);
 
 void					hook_camera_rotate_x(t_cam *cam, float const a);
 void					hook_camera_rotate_y(t_cam *cam, float const a);
+int						hook_mouse_move(int x, int y, t_mouse *mouse);
+t_vec4					**get_xyu(t_xyu *p, const t_dots *src);
+t_xyu					*xyu_init(void);
+void					fill_xyu1(t_xyu *res);
+void					fill_xyu2(t_xyu *res);
 
 #endif
