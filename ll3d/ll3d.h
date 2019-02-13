@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 14:56:09 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/12 17:41:20 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 13:00:29 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
 # define CAM_FO		0.1f
 
 # define SCREEN_X	1200
-# define SCREEN_Y	1000
+# define SCREEN_Y	800
 
 typedef struct		s_vec2
 {
