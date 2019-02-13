@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dots_connect.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 03:23:03 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/11 23:00:39 by edraugr-         ###   ########.fr       */
+/*   Updated: 2019/02/13 19:34:48 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,7 @@ static void	draw_with_oclusion(const t_mlx *c, t_dots *d,
 	// 	return ;
 	v1 = vec2_new(d->sb[d1]->x + SCREEN_X / 2, d->sb[d1]->y + SCREEN_Y / 2);
 	v2 = vec2_new(d->sb[d2]->x + SCREEN_X / 2, d->sb[d2]->y + SCREEN_Y / 2);
-	cv = vec2_new((int)d->wb[d1]->w, (int)d->wb[d2]->w);
+	cv = vec2_new((int)(d->wb[d1]->w) & 0xFFFFFF, (int)(d->wb[d2]->w) & 0xFFFFFF);
 	//swap_if_d2_less(&v1, &v2, d->cb[d1]->z, d->cb[d2]->z);
 	if (d->cb[d1]->z > d->cb[d2]->z)
 		oclude_z(v1, v2, d->cb[d1]->z, d->cb[d2]->z);

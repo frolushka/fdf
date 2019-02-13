@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 14:56:09 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/13 13:00:29 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 18:54:04 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define CAM_ISO	0
 # define CAM_PER 	1
 
-# define CAM_DSP	1
+# define CAM_DSP	5
 # define CAM_DSE	1
 # define CAM_DFO	1
 
@@ -32,6 +32,15 @@
 
 # define SCREEN_X	1200
 # define SCREEN_Y	800
+
+# define COLOR_WHITE	0xFFFFFF
+# define COLOR_RED		0xFF0000
+# define COLOR_GREEN	0x228B22
+# define COLOR_BLUE		0x0000FF
+# define COLOR_GRAY		0x555555
+# define COLOR_LGRAY	0xAAAAAA
+# define COLOR_BROWN	0x654321
+# define COLOR_BLACK	0x000000
 
 typedef struct		s_vec2
 {
@@ -98,6 +107,7 @@ typedef struct		s_dots
 	int				yc;
 	int				zmin;
 	int				zmax;
+	int				cm;
 	t_vec4			**wb;
 	t_vec3			**cb;
 	t_vec2			**sb;
@@ -181,6 +191,7 @@ void	dots_fill_sb_per(t_vec3 *point, t_vec2 *res, const t_cam *cam);
 t_dots				*dots_init(int const x, int const y);
 int					dots_print(t_dots *res);
 void				dots_scale_y(t_dots *dots, float const s);
+void	dots_color_update(t_dots *dots);
 
 void				image_clear(t_image *img);
 t_image				*image_init(t_mlx *mlx, int const x, int const y);
@@ -190,7 +201,9 @@ int				image_draw_line(t_mlx const *mlx, t_vec2 const *v1,
 					t_vec2 const *v2, t_vec2 const *c);
 
 t_mlx				*mlx_init_ll3d(int width, int height, char *header);
+t_mlx				*mlx_free_ll3d(t_mlx **mlx);
 
 int 		color_lerp(int c1, int c2, float step);
+int			color_get_default(const int z, const int cm);
 
 #endif

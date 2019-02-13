@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:44:24 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/12 17:47:34 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 19:06:17 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ static void inline	hook_key_rotate(const int key, t_mouse *mouse)
 
 static void inline	hook_key_move(const int key, t_mouse *mouse)
 {
+	if (mouse->cam->mode == CAM_ISO)
+		return ;
 	if (key == KEY_W)
 		hook_camera_move_z(mouse->cam, 1);
 	else if (key == KEY_S)
@@ -80,6 +82,11 @@ int			hook_key(const int key, t_mouse *mouse)
 		dots_scale_y(mouse->dots, -1.1f);
 	if (key == KEY_T)
 		dots_scale_y(mouse->dots, 1.1f);
+	if (key == KEY_C)
+	{
+		mouse->dots->cm = (mouse->dots->cm + 1) % 3;
+		dots_color_update(mouse->dots);
+	}
 	redraw(mouse->mlx, mouse->dots, mouse->cam);
 	return (0);
 }

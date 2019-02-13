@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reader_dots.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:38:40 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/06 02:42:02 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 17:56:15 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	read_dots(char *fn, t_dots **res)
 	len = ft_strlen(fn);
 	if (ft_strcmp(fn + len - 4, ".fdf") || !get_size(fn, &size))
 		return (0);
-	if (!(*res = dots_init(size->x, size->y)))
+	if (size->x == -1 || !(*res = dots_init(size->x, size->y)))
 	{
 		free(size);
 		return (0);
