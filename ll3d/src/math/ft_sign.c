@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sign.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:40:25 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 07:41:17 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:22:13 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-int	ft_sign(float const a)
+int	ft_sign(const float a)
 {
 	if (!a)
 		return (0);

@@ -6,13 +6,13 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:28:28 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 18:34:45 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:20:24 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-t_dots	*dots_init(int const x, int const y)
+t_dots	*dots_init(const int x, const int y)
 {
 	t_dots	*res;
 

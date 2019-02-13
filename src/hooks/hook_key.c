@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hook_key.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:44:24 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/13 22:12:19 by edraugr-         ###   ########.fr       */
+/*   Updated: 2019/02/14 00:49:50 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 static int	hook_esc(void)
 {
-	//free all
 	exit(0);
-	return (0);
 }
 
 static void inline	hook_key_change(const int key, t_mouse *mouse)
@@ -75,18 +73,15 @@ int			hook_key(const int key, t_mouse *mouse)
 	if (key == KEY_F)
 		mouse->cam = mouse->cam->add;
 	if (key == KEY_8)
-		mouse->dots->i = (mouse->dots->i + 1) % (mouse->dots->xc * mouse->dots->yc);
+		mouse->dots->i = (mouse->dots->i + 1) % (mouse->dots->xc *
+		mouse->dots->yc);
 	if (key == KEY_7)
-		mouse->dots->i = (mouse->dots->i + (mouse->dots->xc * mouse->dots->yc) - 1) % (mouse->dots->xc * mouse->dots->yc);
+		mouse->dots->i = (mouse->dots->i + (mouse->dots->xc *
+		mouse->dots->yc) - 1) % (mouse->dots->xc * mouse->dots->yc);
 	if (key == KEY_R)
 		dots_scale_y(mouse->dots, -1.1f);
 	if (key == KEY_T)
 		dots_scale_y(mouse->dots, 1.1f);
-	if (key == KEY_C)
-	{
-		mouse->dots->cm = (mouse->dots->cm + 1) % 3;
-		dots_color_update(mouse->dots);
-	}
 	if (key == KEY_X)
 		hook_x(mouse);
 	else if (key == KEY_H)

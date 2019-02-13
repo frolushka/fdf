@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   vec2_mult.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 03:29:42 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 03:49:54 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:24:22 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-t_vec2	*vec2_mult(t_vec2 const *v, int const s)
+t_vec2	*vec2_mult(const t_vec2 *v, const int s)
 {
 	t_vec2	*vr;
 

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   image_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:34:33 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 07:32:35 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:21:14 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-t_image	*image_init(t_mlx *mlx, int const x, int const y)
+t_image	*image_init(t_mlx *mlx, const int x, const int y)
 {
 	t_image	*img;
 

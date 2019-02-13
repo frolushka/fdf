@@ -6,13 +6,13 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:12:44 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/12 15:09:34 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:18:58 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-static float	dots_fill_cb_det(float const val[4][4])
+static float	dots_fill_cb_det(const float val[4][4])
 {
 	return (val[0][0] * val[1][1] * val[2][2] -
 		val[0][0] * val[1][2] * val[2][1] +
@@ -22,14 +22,14 @@ static float	dots_fill_cb_det(float const val[4][4])
 		val[0][2] * val[1][1] * val[2][0]);
 }
 
-static void	row_from_mtx(float val[4][4], t_vec3 *v, int const c)
+static void		row_from_mtx(const float val[4][4], t_vec3 *v, const int c)
 {
 	v->x = val[c][0];
 	v->y = val[c][1];
 	v->z = val[c][2];
 }
 
-static void	row_to_mtx(float val[4][4], const t_vec3 *v, int const c)
+static void		row_to_mtx(float val[4][4], const t_vec3 *v, const int c)
 {
 	val[c][0] = v->x;
 	val[c][1] = v->y;
@@ -43,7 +43,8 @@ void			dots_fill_cb(const t_vec4 *p, const t_mtx4 *c, t_vec3 *res)
 	t_vec3	*t;
 
 	m = (t_mtx4 *)c;
-	l = vec3_new(p->x - c->val[3][0], p->y - c->val[3][1], p->z - c->val[3][2]);
+	l = vec3_new(p->x - c->val[3][0],
+		p->y - c->val[3][1], p->z - c->val[3][2]);
 	t = vec3_init();
 	row_from_mtx(m->val, t, 0);
 	row_to_mtx(m->val, l, 0);

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   vec4_print.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:12:00 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 08:24:54 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:26:36 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 #include <stdio.h>
 
-void	vec4_print(t_vec4 const *v)
+void	vec4_print(const t_vec4 *v)
 {
 	printf("(%.3f,%.3f,%.3f,%.3f)", v->x, v->y, v->z, v->w);
 }

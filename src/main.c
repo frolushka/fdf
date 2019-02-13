@@ -3,31 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 20:21:58 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/13 22:05:04 by edraugr-         ###   ########.fr       */
+/*   Updated: 2019/02/14 00:45:33 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-
-static int		free_helper(t_mlx **mlx, t_dots **dots, t_cam **cam, t_mouse **mouse)
-{
-	if (mlx && *mlx)
-		mlx_free_ll3d(mlx);
-	if (cam && *cam)
-	{
-		((*cam)->cam ? ft_memdel((void **)&((*cam)->cam)) : 0);
-		ft_memdel((void **)cam);
-	}
-	if (dots && *dots)
-		dots_free(dots);
-	if (mouse && *mouse)
-		ft_memdel((void **)mouse);
-	write(1, "error\n", 6);
-	return (0);
-}
 
 static t_cam	*camera_default(float z)
 {
@@ -57,7 +40,8 @@ static t_cam	*camera_setup(t_cam **cam, t_dots **dots)
 	return (*cam);
 }
 
-static void		default_init(t_mlx **mlx, t_dots **dots, t_cam **cam, t_mouse **mouse)
+static void		default_init(t_mlx **mlx, t_dots **dots, t_cam **cam,
+	t_mouse **mouse)
 {
 	*mlx = NULL;
 	*dots = NULL;

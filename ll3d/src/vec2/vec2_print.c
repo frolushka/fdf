@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   vec2_print.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/22 03:29:42 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 08:25:03 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:24:36 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 #include <stdio.h>
 
-void inline	vec2_print(t_vec2 const *v)
+void inline	vec2_print(const t_vec2 *v)
 {
 	printf("(%d,%d)", v->x, v->y);
 }

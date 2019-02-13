@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+         #
+#    By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/31 20:35:25 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/13 22:07:27 by edraugr-         ###   ########.fr        #
+#    Updated: 2019/02/14 00:37:33 by sbednar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,13 +62,20 @@ SRC			=	vec2_init.c \
 				image_init.c \
 				image_set_pixel.c \
 				image_draw_line.c \
+				image_draw_line2.c \
 				mlx_init_ll3d.c \
 				color_lerp.c \
 				color_get_default.c \
+				color_set_br.c \
 				vec2_set.c \
 				ft_min_max.c \
 				vec3_set.c \
-				dots4_cpy.c
+				dots4_cpy.c \
+				oclude_x.c \
+				oclude_y.c \
+				oclude_z.c \
+				oclusion_draw_line.c \
+				oclusion_utils.c
 
 OBJ			=	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 INC			=	-I. -I../libft -I../minilibx
@@ -92,6 +99,9 @@ $(OBJ_DIR)/%.o:$(SRC_DIR)/camera/%.c
 	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
 
 $(OBJ_DIR)/%.o:$(SRC_DIR)/color/%.c
+	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
+
+$(OBJ_DIR)/%.o:$(SRC_DIR)/oclusion/%.c
 	$(CC) $(CFLAGS) $(INC) -o $@ -c $<
 
 $(OBJ_DIR)/%.o:$(SRC_DIR)/dots/%.c

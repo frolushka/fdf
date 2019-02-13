@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   camera_rotate_x.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:53:36 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/05 23:34:48 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:16:07 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-void	camera_rotate_x(t_cam *cam, float const a)
+void	camera_rotate_x(t_cam *cam, const float a)
 {
 	t_mtx4	*tmp;
 	t_mtx4	*mr;

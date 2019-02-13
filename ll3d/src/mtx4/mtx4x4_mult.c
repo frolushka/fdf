@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   mtx4x4_mult.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 03:19:32 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/04 05:06:33 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:24:04 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-t_mtx4	*mtx4x4_mult(t_mtx4 const *a, t_mtx4 const *b, t_mtx4 *dst)
+t_mtx4	*mtx4x4_mult(const t_mtx4 *a, const t_mtx4 *b, t_mtx4 *dst)
 {
 	int	c;
 	int	r;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:57:07 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 22:09:16 by edraugr-         ###   ########.fr       */
+/*   Updated: 2019/02/14 00:42:25 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,6 @@ int						read_dots(char *fn, t_dots **res);
 int						get_color(char const *it, const int cm);
 int						free_all(char **line, char ***tmp, int fd);
 
-// int	hook_rot_debug(int key, t_mouse *mouse);
 t_mouse					*mouse_init(t_mlx *mlx, t_cam *cam, t_dots *dots);
 
 void					hook_camera_move_x(t_cam *cam, float const a);
@@ -113,5 +112,8 @@ t_vec4					**get_xyu(t_xyu *p, const t_dots *src);
 t_xyu					*xyu_init(void);
 void					fill_xyu1(t_xyu *res);
 void					fill_xyu2(t_xyu *res);
+
+int						free_helper(t_mlx **mlx, t_dots **dots, t_cam **cam,
+						t_mouse **mouse);
 
 #endif

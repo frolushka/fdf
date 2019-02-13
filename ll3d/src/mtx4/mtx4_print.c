@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   mtx4_print.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 23:06:38 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/04 08:10:19 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:23:42 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 #include <stdio.h>
 
-void	mtx4_print(t_mtx4 const *src)
+void	mtx4_print(const t_mtx4 *src)
 {
 	int	i;
 	int	j;

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_print.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:11:01 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 08:24:57 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:26:03 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 #include <stdio.h>
 
-void inline	vec3_print(t_vec3 const *v)
+void inline	vec3_print(const t_vec3 *v)
 {
 	printf("(%.3f,%.3f,%.3f)", v->x, v->y, v->z);
 }

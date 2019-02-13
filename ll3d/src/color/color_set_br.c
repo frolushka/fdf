@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camera_rotate_y.c                                  :+:      :+:    :+:   */
+/*   color_set_brightness.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/04 06:33:58 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 23:16:13 by sbednar          ###   ########.fr       */
+/*   Created: 2019/02/13 23:49:12 by sbednar           #+#    #+#             */
+/*   Updated: 2019/02/13 23:54:26 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-void	camera_rotate_y(t_cam *cam, const float a)
+int	color_set_br(const int c, float br)
 {
-	t_mtx4	*tmp;
-	t_mtx4	*mr;
+ 	int	r;
+ 	int	g;
+ 	int	b;
 
-	if (!(tmp = mtx4_copy(cam->cam)))
-		return ;
-	if (!(mr = mtx4_get_rotation(0, 1, 0, a * cam->sence)))
-		return ;
-	mtx4x3_mult(tmp, mr, cam->cam);
-	free(tmp);
+	if (br > 1)
+		br = 1;
+ 	r = ((c & 0xFF0000) >> 16) * br;
+ 	g = ((c & 0xFF00) >> 8) * br;
+ 	b = (c & 0xFF) * br;
+ 	return (r << 16 | g << 8 | b);
 }

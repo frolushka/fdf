@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:10:16 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 14:57:25 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:34:35 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_mlx	*mlx_free_ll3d(t_mlx **mlx)
 	return (*mlx);
 }
 
-t_mlx	*mlx_init_ll3d(int width, int height, char *header)
+t_mlx	*mlx_init_ll3d(const int width, const int height, char *header)
 {
 	t_mlx	*res;
 

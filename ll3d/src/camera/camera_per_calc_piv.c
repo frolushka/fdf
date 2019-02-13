@@ -6,13 +6,14 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 17:36:29 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/12 17:48:03 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:15:25 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-static void inline	camera_pcv_val(t_vec3 *res, float val[4][4], float const focus)
+static void inline	camera_pcv_val(t_vec3 *res, const float val[4][4],
+	const float focus)
 {
 	res->x = val[3][0] - val[2][0] * focus;
 	res->y = val[3][1] - val[2][1] * focus;

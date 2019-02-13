@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   vec3_sum.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:10:55 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 05:10:58 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:26:17 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-t_vec3	*vec3_sum(t_vec3 const *v1, t_vec3 const *v2)
+t_vec3	*vec3_sum(const t_vec3 *v1, const t_vec3 *v2)
 {
 	t_vec3	*vr;
 

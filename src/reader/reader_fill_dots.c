@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:41:41 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 19:49:38 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 00:44:58 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,6 @@ static int inline	init_vecs(t_dots **res, int const i, int const j)
 		!((*res)->cb[i * (*res)->xc + j] = vec3_init()) ||
 		!((*res)->sb[i * (*res)->xc + j] = vec2_init()))
 		return (1);
-	// if (!((*res)->cb[i * (*res)->xc + j] = vec3_init()))
-	// {
-	// 	ft_memdel((void **)&((*res)->wb[i * (*res)->xc + j]));
-	// 	return (1);
-	// }
-	// if (!((*res)->sb[i * (*res)->xc + j] = vec2_init()))
-	// {
-	// 	ft_memdel((void **)&((*res)->wb[i * (*res)->xc + j]));
-	// 	ft_memdel((void **)&((*res)->cb[i * (*res)->xc + j]));
-	// 	return (1);
-	// }
 	return (0);
 }
 

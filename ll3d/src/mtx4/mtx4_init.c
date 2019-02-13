@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   mtx4_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/17 22:58:25 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/04 05:06:12 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:32:57 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-t_mtx4	*mtx4_init(float const val)
+t_mtx4	*mtx4_init(const float val)
 {
 	t_mtx4	*res;
 	int		i;

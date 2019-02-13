@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hook_xyu.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 22:08:07 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/13 22:08:53 by edraugr-         ###   ########.fr       */
+/*   Updated: 2019/02/14 00:44:45 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ int 		hook_x(t_mouse *mouse)
 	{
 		j = -1;
 		while(++j < mouse->dots->xc)
-			lerp_v4(mouse->xyu[i * mouse->dots->yc + j], mouse->dots->wb[i * mouse->dots->yc + j], 0.1f);
+			lerp_v4(mouse->xyu[i * mouse->dots->yc + j], mouse->dots->wb[i *
+			mouse->dots->yc + j], 0.1f);
 	}
 	redraw(mouse->mlx, mouse->dots, mouse->cam);
 	return (0);
@@ -47,7 +48,8 @@ int 		hook_h(t_mouse *mouse)
 	{
 		j = -1;
 		while(++j < mouse->dots->xc)
-			lerp_v4(mouse->norm[i * mouse->dots->yc + j], mouse->dots->wb[i * mouse->dots->yc + j], 0.1f);
+			lerp_v4(mouse->norm[i * mouse->dots->yc + j], mouse->dots->wb[i *
+			mouse->dots->yc + j], 0.1f);
 	}
 	redraw(mouse->mlx, mouse->dots, mouse->cam);
 	return (0);

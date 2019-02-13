@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 03:14:08 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/04 03:14:59 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/13 23:21:53 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-int	ft_abs(int const x)
+int	ft_abs(const int x)
 {
 	return (x >= 0 ? x : -x);
 }

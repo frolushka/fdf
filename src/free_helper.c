@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   camera_rotate_y.c                                  :+:      :+:    :+:   */
+/*   free_helper.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/04 06:33:58 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 23:16:13 by sbednar          ###   ########.fr       */
+/*   Created: 2019/02/14 00:42:43 by sbednar           #+#    #+#             */
+/*   Updated: 2019/02/14 00:47:21 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ll3d.h"
+#include "fdf.h"
 
-void	camera_rotate_y(t_cam *cam, const float a)
+int		free_helper(t_mlx **mlx, t_dots **dots, t_cam **cam, t_mouse **mouse)
 {
-	t_mtx4	*tmp;
-	t_mtx4	*mr;
-
-	if (!(tmp = mtx4_copy(cam->cam)))
-		return ;
-	if (!(mr = mtx4_get_rotation(0, 1, 0, a * cam->sence)))
-		return ;
-	mtx4x3_mult(tmp, mr, cam->cam);
-	free(tmp);
+	if (mlx && *mlx)
+		mlx_free_ll3d(mlx);
+	if (cam && *cam)
+	{
+		((*cam)->cam ? ft_memdel((void **)&((*cam)->cam)) : 0);
+		ft_memdel((void **)cam);
+	}
+	if (dots && *dots)
+		dots_free(dots);
+	if (mouse && *mouse)
+		ft_memdel((void **)mouse);
+	write(1, "something happed...\n", 20);
+	return (0);
 }

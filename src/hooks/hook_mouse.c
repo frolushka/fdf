@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hook_mouse.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edraugr- <edraugr-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/09 11:30:44 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 21:50:04 by edraugr-         ###   ########.fr       */
+/*   Updated: 2019/02/13 23:13:41 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int	hook_mouse_move(int x, int y, t_mouse *mouse)
 	if (dx != 0)
 		hook_camera_rotate_y(mouse->cam, (float)dx * MOUSE_TO_ANG);
 	if (dy != 0)
-		hook_camera_rotate_x(mouse->cam, (float)dy * MOUSE_TO_ANG);
+		hook_camera_rotate_x(mouse->cam, (float)dy *
+		(mouse->cam->mode == CAM_ISO ? 1 : -1) * MOUSE_TO_ANG);
 	mouse->x = x;
 	mouse->y = y;
 	redraw(mouse->mlx, mouse->dots, mouse->cam);
