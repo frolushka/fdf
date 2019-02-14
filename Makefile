@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+         #
+#    By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 16:23:16 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/14 00:42:33 by sbednar          ###   ########.fr        #
+#    Updated: 2019/02/14 20:55:53 by sbednar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,6 @@ SRC			= 	main.c \
 				reader_check_line.c \
 				reader_fill_dots.c \
 				reader_get_size.c \
-				reader_print_dots.c \
 				reader_dots.c \
 				reader_utils.c \
 				mouse_init.c \

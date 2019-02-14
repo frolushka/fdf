@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   hook_key.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:44:24 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/14 00:49:50 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:46:54 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static int	hook_esc(void)
+static int			hook_esc(void)
 {
 	exit(0);
 }
@@ -63,7 +63,7 @@ static void inline	hook_key_move(const int key, t_mouse *mouse)
 		hook_camera_move_y(mouse->cam, -1);
 }
 
-int			hook_key(const int key, t_mouse *mouse)
+int					hook_key(const int key, t_mouse *mouse)
 {
 	hook_key_move(key, mouse);
 	hook_key_rotate(key, mouse);

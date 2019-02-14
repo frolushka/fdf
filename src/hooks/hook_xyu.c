@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   hook_xyu.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 22:08:07 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/14 00:44:45 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:46:12 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@ static void	lerp_v4(const t_vec4 *b, t_vec4 *dst, const float t)
 	dst->z = dst->z + t * (b->z - dst->z);
 }
 
-int 		hook_x(t_mouse *mouse)
+int			hook_x(t_mouse *mouse)
 {
-	int i, j;
+	int	i;
+	int	j;
 
 	i = -1;
 	if (!mouse->xyu)
 		return (0);
-	while(++i < mouse->dots->yc)
+	while (++i < mouse->dots->yc)
 	{
 		j = -1;
-		while(++j < mouse->dots->xc)
+		while (++j < mouse->dots->xc)
 			lerp_v4(mouse->xyu[i * mouse->dots->yc + j], mouse->dots->wb[i *
 			mouse->dots->yc + j], 0.1f);
 	}
@@ -37,17 +38,18 @@ int 		hook_x(t_mouse *mouse)
 	return (0);
 }
 
-int 		hook_h(t_mouse *mouse)
+int			hook_h(t_mouse *mouse)
 {
-	int i, j;
+	int	i;
+	int	j;
 
 	i = -1;
 	if (!mouse->xyu)
 		return (0);
-	while(++i < mouse->dots->yc)
+	while (++i < mouse->dots->yc)
 	{
 		j = -1;
-		while(++j < mouse->dots->xc)
+		while (++j < mouse->dots->xc)
 			lerp_v4(mouse->norm[i * mouse->dots->yc + j], mouse->dots->wb[i *
 			mouse->dots->yc + j], 0.1f);
 	}

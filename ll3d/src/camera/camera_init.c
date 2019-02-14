@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 05:39:55 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/06 01:33:03 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:36:13 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ static void	camera_init_1(float val[4][4])
 	val[3][2] = 0;
 	val[3][3] = 1;
 }
+
 t_cam		*camera_init(void)
 {
 	t_cam	*res;
 
-	if(!(res = (t_cam *)malloc(sizeof(t_cam))))
+	if (!(res = (t_cam *)malloc(sizeof(t_cam))))
 		return (NULL);
 	res->cam = mtx4_init(0);
 	camera_init_1(res->cam->val);

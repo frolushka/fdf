@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reader_fill_dots.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:41:41 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 00:44:58 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:43:19 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int					fill_dots(char *fn, t_dots **res)
 	int		j;
 	int		fd;
 
-	if (init_arrays(res) || (fd = open(fn, O_RDONLY)) < 0)
+	if ((fd = open(fn, O_RDONLY)) < 0 || init_arrays(res))
 		return (0);
 	i = -1;
 	while (++i < (*res)->yc)

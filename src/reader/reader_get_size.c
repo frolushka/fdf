@@ -6,16 +6,14 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:42:08 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/06 02:51:37 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:55:34 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static int inline	helper(t_vec2 **res, int fd)
+static int inline	helper(int fd)
 {
-	// WRONG
-	free(*res);
 	close(fd);
 	return (0);
 }
@@ -42,7 +40,7 @@ int					get_size(char *fn, t_vec2 **res)
 		free_all(&line, &tmp, -1);
 	}
 	if (sts == -1)
-		return (helper(res, fd));
+		return (helper(fd));
 	close(fd);
 	return (1);
 }

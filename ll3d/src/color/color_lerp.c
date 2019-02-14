@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   color_lerp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 19:42:55 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 23:16:32 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:37:33 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
-int 		color_lerp(const int c1, const int c2, const float step)
+int	color_lerp(const int c1, const int c2, const float step)
 {
 	int	r;
 	int	g;

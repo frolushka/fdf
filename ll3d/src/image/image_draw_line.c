@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   image_draw_line.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:50:40 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 00:05:43 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:39:40 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
-#include <stdio.h>
 
 static int	image_draw_line_1(t_mlx const *mlx, int *t)
 {
@@ -30,7 +29,7 @@ static int	image_draw_line_1(t_mlx const *mlx, int *t)
 		{
 			t[10] += t[9];
 			image_set_pixel(mlx->image, t[10], t[12], color_lerp(t[14], t[15],
-			(float)ft_fabs(t[10] - t[16]) / ft_fabs(t[11] - t[16])));
+				(float)ft_fabs(t[10] - t[16]) / ft_fabs(t[11] - t[16])));
 		}
 		return (0);
 	}
@@ -76,14 +75,14 @@ static int	image_draw_line_3(t_mlx const *mlx, int *t)
 }
 
 static int	image_draw_line_4(t_mlx const *mlx, int *t,
-				unsigned short *dt)
+	unsigned short *dt)
 {
 	dt[2] = 0;
 	dt[0] = 8;
 	dt[5] = 255;
 	if (t[7] > t[6])
 	{
-		dt[1] = ((unsigned long) t[6] << 16) / (unsigned long) t[7];
+		dt[1] = ((unsigned long)t[6] << 16) / (unsigned long)t[7];
 		while (--t[7])
 		{
 			dt[3] = dt[2];
@@ -92,7 +91,7 @@ static int	image_draw_line_4(t_mlx const *mlx, int *t,
 				t[10] += t[9];
 			++t[12];
 			dt[4] = dt[2] >> dt[0];
-			image_set_pixel(mlx->image, t[10], t[12],color_set_br(
+			image_set_pixel(mlx->image, t[10], t[12], color_set_br(
 				color_lerp(t[14], t[15], (float)ft_fabs(t[10] - t[16]) /
 				ft_fabs(t[11] - t[16])), (255.0f - dt[4]) / 255.0f));
 			image_set_pixel(mlx->image, t[10] + t[9], t[12], color_set_br(
@@ -106,10 +105,10 @@ static int	image_draw_line_4(t_mlx const *mlx, int *t,
 }
 
 int			image_draw_line(t_mlx const *mlx, t_vec2 const *v1,
-				t_vec2 const *v2, t_vec2 const *c)
+	t_vec2 const *v2, t_vec2 const *c)
 {
-	unsigned short dt[6];
-	int	t[18];
+	unsigned short	dt[6];
+	int				t[18];
 
 	ft_bzero(&dt, 6 * sizeof(short));
 	ft_bzero(&t, 18 * 4);

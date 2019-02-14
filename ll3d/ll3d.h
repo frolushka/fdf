@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ll3d.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 14:56:09 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/14 00:37:13 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:56:38 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@
 # define CAM_SE			1
 # define CAM_FO			0.1f
 
-# define SCREEN_X		1200
-# define SCREEN_Y		800
+# define SCREEN_X		1920
+# define SCREEN_Y		1080
 
 # define COLOR_WHITE	0xFFFFFF
 # define COLOR_RED		0xFF0000
@@ -118,7 +118,6 @@ t_vec2					*vec2_new(const int x, const int y);
 t_vec2					*vec2_sum(const t_vec2 *v1, const t_vec2 *v2);
 t_vec2					*vec2_mult(const t_vec2 *v, const int s);
 t_vec2					*vec2_copy(const t_vec2 *v);
-void					vec2_print(const t_vec2 *v);
 void					vec2_set(t_vec2 *v, const int x, const int y);
 
 t_vec3					*vec3_init(void);
@@ -126,7 +125,6 @@ t_vec3					*vec3_new(const float x, const float y, const float z);
 t_vec3					*vec3_sum(const t_vec3 *v1, const t_vec3 *v2);
 t_vec3					*vec3_mult(const t_vec3 *v, const float s);
 t_vec3					*vec3_copy(const t_vec3 *v);
-void					vec3_print(const t_vec3 *v);
 void					vec3_set(t_vec3 *v, const float x, const float y,
 						const float z);
 
@@ -136,7 +134,6 @@ t_vec4					*vec4_new(const float x, const float y, const float z,
 t_vec4					*vec4_sum(const t_vec4 *v1, const t_vec4 *v2);
 t_vec4					*vec4_mult(const t_vec4 *v, const float s);
 t_vec4					*vec4_copy(const t_vec4 *v);
-void					vec4_print(const t_vec4 *v);
 t_vec4					**dots4_cpy(const t_vec4 **src, const int xc,
 						const int yc);
 
@@ -152,7 +149,6 @@ int						ft_max(const int a, const int b);
 t_mtx4					*mtx4_init(const float val);
 void					mtx4_clear(t_mtx4 *mtx);
 t_mtx4					*mtx4_copy(const t_mtx4 *src);
-void					mtx4_print(const t_mtx4 *src);
 t_mtx4					*mtx4x3_mult(const t_mtx4 *a, const t_mtx4 *b,
 						t_mtx4 *dst);
 t_mtx4					*mtx4x4_mult(const t_mtx4 *a, const t_mtx4 *b,
@@ -177,7 +173,6 @@ void					dots_fill_sb_iso(const t_vec3 *p, t_vec2 *res,
 void					dots_fill_sb_per(const t_vec3 *point, t_vec2 *res,
 						const t_cam *cam);
 t_dots					*dots_init(const int x, const int y);
-int						dots_print(t_dots *res);
 void					dots_scale_y(t_dots *dots, const float s);
 void					dots_color_update(t_dots *dots);
 
@@ -203,7 +198,7 @@ int						check_out(const t_dots *d, const int d1, const int d2);
 int						swap_if_d2_less(t_vec2 **d1, t_vec2 **d2,
 						const float d1v, const float d2v);
 
-int 					color_lerp(int c1, int c2, float step);
+int						color_lerp(int c1, int c2, float step);
 int						color_get_default(const int z, const int cm);
 int						color_set_br(const int c, float br);
 

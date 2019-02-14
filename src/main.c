@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/18 20:21:58 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/14 00:45:33 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:50:27 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static void		default_init(t_mlx **mlx, t_dots **dots, t_cam **cam,
 	*mouse = NULL;
 }
 
-int 			main(int argc, char **argv)
+int				main(int argc, char **argv)
 {
 	t_mlx	*mlx;
 	t_dots	*dots;
@@ -71,7 +71,6 @@ int 			main(int argc, char **argv)
 	if ((mouse->xyu = get_xyu(xyu_init(), dots)))
 		mouse->norm = dots4_cpy((const t_vec4 **)dots->wb, dots->xc, dots->yc);
 	redraw(mouse->mlx, mouse->dots, mouse->cam);
-	//mlx_hook(mlx->win, 4, 0, hook_wheel, mouse);
 	mlx_hook(mlx->win, 6, 0, hook_mouse_move, mouse);
 	mlx_hook(mlx->win, 2, 0, hook_key, mouse);
 	mlx_loop(mlx->mlx);

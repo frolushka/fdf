@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+         #
+#    By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/31 20:35:25 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/14 00:37:33 by sbednar          ###   ########.fr        #
+#    Updated: 2019/02/14 20:44:34 by sbednar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,26 +20,22 @@ SRC			=	vec2_init.c \
 				vec2_sum.c \
 				vec2_mult.c \
 				vec2_copy.c \
-				vec2_print.c \
 				vec3_init.c \
 				vec3_new.c \
 				vec3_sum.c \
 				vec3_mult.c \
 				vec3_copy.c \
-				vec3_print.c \
 				vec4_init.c \
 				vec4_new.c \
 				vec4_sum.c \
 				vec4_mult.c \
 				vec4_copy.c \
-				vec4_print.c \
 				ft_abs.c \
 				ft_fabs.c \
 				ft_sign.c \
 				mtx4_init.c \
 				mtx4_clear.c \
 				mtx4_copy.c \
-				mtx4_print.c \
 				mtx4x3_mult.c \
 				mtx4x4_mult.c \
 				mtx4_get_rotation.c \
@@ -56,7 +52,6 @@ SRC			=	vec2_init.c \
 				dots_fill_sb_per.c \
 				dots_init.c \
 				dots_scale.c \
-				dots_print.c \
 				dots_color_update.c \
 				image_clear.c \
 				image_init.c \

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   image_draw_line2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 23:57:11 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 00:06:25 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:39:51 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
 
 int	image_draw_line2(const t_mlx *mlx, int *t,
-				unsigned short *dt)
+	unsigned short *dt)
 {
-	dt[1] = ((unsigned long) t[7] << 16) / (unsigned long) t[6];
+	dt[1] = ((unsigned long)t[7] << 16) / (unsigned long)t[6];
 	while (--t[6])
 	{
 		dt[3] = dt[2];

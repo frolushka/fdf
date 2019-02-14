@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera_per_calc_piv.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/12 17:36:29 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 23:15:25 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:36:32 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static void inline	camera_pcv_val(t_vec3 *res, const float val[4][4],
 	res->z = val[3][2] - val[2][2] * focus;
 }
 
-void	camera_per_calc_piv(t_cam *cam)
+void				camera_per_calc_piv(t_cam *cam)
 {
 	t_vec3	*res;
 

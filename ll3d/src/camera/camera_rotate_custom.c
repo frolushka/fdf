@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   camera_rotate_custom.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/06 01:22:04 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 23:15:55 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:36:41 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 void		camera_rotate_custom(t_cam *cam, const t_vec3 *p,
 	const t_vec3 *axis, const float a)
 {
-	t_mtx4	*tmp;
-	t_mtx4	*mr;
+	t_mtx4		*tmp;
+	t_mtx4		*mr;
 	float		xp;
 	float		yp;
 	float		zp;

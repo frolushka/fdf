@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   color_get_default.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 18:35:40 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 19:49:54 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:37:26 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	get_default_color_m0(const int z)
 {
-	(void) z;
+	(void)z;
 	return (COLOR_WHITE);
 }
 

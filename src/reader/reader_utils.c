@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   reader_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:39:31 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/13 19:50:02 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:59:11 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-
-static int	memset_free(void **ptr, int	size)
+int			memset_free(void **ptr, int size)
 {
 	char	**cptr;
 	int		i;
@@ -29,7 +28,7 @@ static int	memset_free(void **ptr, int	size)
 	return (1);
 }
 
-t_dots	*dots_free(t_dots **dots)
+t_dots		*dots_free(t_dots **dots)
 {
 	if (*((*dots)->wb))
 		memset_free((void **)((*dots)->wb),
@@ -50,7 +49,7 @@ t_dots	*dots_free(t_dots **dots)
 	return (*dots);
 }
 
-int		get_color(const char *it, const int cm)
+int			get_color(const char *it, const int cm)
 {
 	int	i;
 	int	k;
@@ -79,7 +78,7 @@ int		get_color(const char *it, const int cm)
 	return (res);
 }
 
-int		free_all(char **line, char ***tmp, int fd)
+int			free_all(char **line, char ***tmp, int fd)
 {
 	if (line)
 		ft_strdel(line);

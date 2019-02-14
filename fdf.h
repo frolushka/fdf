@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sbednar <sbednar@student.fr.42>            +#+  +:+       +#+        */
+/*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/04 07:57:07 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 00:42:25 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 20:59:24 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ typedef struct			s_xyu
 
 int						read_dots(char *fn, t_dots **res);
 void					solve_dots(t_dots *dots, const t_cam *cam);
-int						print_dots(t_dots *res);
 
 void					fill_screen(t_dots **d);
 void					connect_dots(const t_mlx *c, t_dots **d);
@@ -79,13 +78,12 @@ void					redraw(const t_mlx *c, t_dots *dots, const t_cam *cam);
 int						hook_mouse_move(int x, int y, t_mouse *mouse);
 int						hook_key(const int key, t_mouse *mouse);
 int						hook_wheel(int key, int x, int y, t_mouse *m);
-int 					hook_x(t_mouse *mouse);
-int 					hook_h(t_mouse *mouse);
+int						hook_x(t_mouse *mouse);
+int						hook_h(t_mouse *mouse);
 
 int						check_line_valid(char **line);
 int						fill_dots(char *fn, t_dots **res);
 int						get_size(char *fn, t_vec2 **res);
-int						print_dots(t_dots *res);
 int						read_dots(char *fn, t_dots **res);
 
 int						get_color(char const *it, const int cm);
@@ -115,5 +113,6 @@ void					fill_xyu2(t_xyu *res);
 
 int						free_helper(t_mlx **mlx, t_dots **dots, t_cam **cam,
 						t_mouse **mouse);
+int						memset_free(void **ptr, int size);
 
 #endif
