@@ -6,7 +6,7 @@
 #    By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/06 16:23:16 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/14 20:55:53 by sbednar          ###   ########.fr        #
+#    Updated: 2019/02/14 21:26:28 by sbednar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ INCS		=	-I. -I./ll3d -I./minilibx -I./libft
 LIBS		=	-L./libft -L./minilibx -L./ll3d -lft -lmlx -lll3d -framework OpenGL -framework AppKit
 
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror -g -o3
+CFLAGS		=	-Wall -Wextra -Werror -o9
 
 all: $(NAME)
 	@echo "\033[92m\033[1m---> ALL DONE\033[0m\033[0m"
@@ -100,6 +100,7 @@ fclean:
 	@echo "\033[91m\033[1m[1/4] \033[97m\033[1mll3d full clean:\033[0m"
 	@$(MAKE) -C $(LL3D_DIR) fclean
 	@echo "\033[91m\033[1m[2/4] \033[97m\033[1mmlx full clean:\033[0m"
+	@$(MAKE) -C $(MLX_DIR) clean
 	@echo "\033[91m\033[1m[3/4] \033[97m\033[1mlibft full clean:\033[0m"
 	@$(MAKE) -C $(FT_DIR) fclean
 	@echo "\033[91m\033[1m[4/4] \033[97m\033[1mexecutable delete:\033[0m"

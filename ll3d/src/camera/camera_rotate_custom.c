@@ -6,12 +6,11 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/06 01:22:04 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 20:36:41 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:23:08 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ll3d.h"
-#include <stdio.h>
 
 void		camera_rotate_custom(t_cam *cam, const t_vec3 *p,
 	const t_vec3 *axis, const float a)

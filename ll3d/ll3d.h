@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 14:56:09 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/14 20:56:38 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:23:03 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "mlx.h"
 # include <stdlib.h>
 # include <math.h>
-# include <stdio.h>
 
 # define CAM_ISO		0
 # define CAM_PER 		1

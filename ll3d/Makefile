@@ -6,7 +6,7 @@
 #    By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/31 20:35:25 by sbednar           #+#    #+#              #
-#    Updated: 2019/02/14 20:44:34 by sbednar          ###   ########.fr        #
+#    Updated: 2019/02/14 21:26:19 by sbednar          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,7 @@ OBJ			=	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 INC			=	-I. -I../libft -I../minilibx
 
 CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror -g -o3
+CFLAGS		=	-Wall -Wextra -Werror -o9
 
 all: $(NAME)
 

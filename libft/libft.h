@@ -6,17 +6,19 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/22 16:55:09 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/01/17 23:10:43 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:24:33 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
 # include <string.h>
 # include <unistd.h>
 # include <fcntl.h>
 # include <stdlib.h>
-# define BUFF_SIZE 32
+
+# define BUFF_SIZE	32
 
 typedef struct		s_list
 {

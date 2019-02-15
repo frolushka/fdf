@@ -6,11 +6,12 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/18 12:17:26 by edraugr-          #+#    #+#             */
-/*   Updated: 2019/02/14 20:50:19 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:24:15 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+#include <stdio.h>
 
 static void	put_camera_info(const t_mlx *mlx, t_cam const *cam)
 {

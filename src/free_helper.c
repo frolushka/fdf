@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 00:42:43 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 21:04:45 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:08:35 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,6 @@ int			free_helper(t_mlx **mlx, t_dots **dots, t_cam **cam,
 		free_helper2(*mouse);
 		ft_memdel((void **)mouse);
 	}
-	write(1, "something happed...\n", 20);
+	write(1, "something happend...\n", 21);
 	return (0);
 }

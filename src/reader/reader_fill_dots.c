@@ -6,7 +6,7 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 22:41:41 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 20:43:19 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:20:02 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int inline	fill_res(t_dots **res, int const i, int const j,
 	(*res)->wb[i * (*res)->xc + j]->y = y;
 	if (y > (*res)->zmax)
 		(*res)->zmax = y;
-	else if (y < (*res)->zmin)
+	if (y < (*res)->zmin)
 		(*res)->zmin = y;
 	(*res)->wb[i * (*res)->xc + j]->w = get_color(tmp, (*res)->cm);
 	return (0);

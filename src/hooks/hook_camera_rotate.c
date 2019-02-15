@@ -6,12 +6,11 @@
 /*   By: sbednar <sbednar@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/06 00:39:49 by sbednar           #+#    #+#             */
-/*   Updated: 2019/02/14 20:45:33 by sbednar          ###   ########.fr       */
+/*   Updated: 2019/02/14 21:23:09 by sbednar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
-#include <stdio.h>
 
 void	hook_camera_rotate_x(t_cam *cam, float const a)
 {
